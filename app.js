@@ -1,33 +1,50 @@
-$(document).ready(function() {
+	// Create a "close" button and append it to each list item
+	var myNodelist = document.getElementsByTagName("LI");
+	var i;
+	for (i = 0; i < myNodelist.length; i++) {
+		var span = document.createElement("SPAN");
+		var txt = document.createTextNode("\u00D7");
+		span.className = "close";
+		span.appendChild(txt);
+		myNodelist[i].appendChild(span);
+	}
+
+	// Click on a close button to hide the current list item
+	for (i = 0; i < $('.close').length; i++) {
+		$('.close').on('click', function() {
+			var div = this.parentElement;
+			$(div).css('display', 'none');
+		});
+	}
+
+	// Add a "checked" symbol when clicking on a list item
+
 
 	// create a new list item when click the 'add' button
 	function newElement() {
 		var li = document.createElement("li");
-		var inputValue = $(document.getElementById("myInput")).val();
+		var inputValue = $("#myInput").val();
 		var t = document.createTextNode(inputValue);
 		li.appendChild(t);
+		var span = document.createElement("SPAN");
+		var txt = document.createTextNode("\u00D7");
+		span.className = "close";
+		span.appendChild(txt);
+		li.appendChild(span);
 
 		if (inputValue === '') {
 			alert("You must write something!");
 		} else {
-			document.getElementById("myUL").appendChild(li);
-			// document.getElementByClassName("todo-list").appendChild(li);
+			$("#myUL").append(li);
 		}
 
-		$(document.getElementById("myInput")).val("");
+		$("#myInput").val("");
 
-		// var span = document.createElement("SPAN");
-		// var txt = document.createTextNode("\u00D7");
-		// span.className = "close";
-		// span.appendChild(txt);
-		// li.appendChild(span);
+		for (var i = 0; i < $('.close').length; i++) {
+			$('.close').on('click', function() {
+				var div = this.parentElement;
+				$(div).css('display', 'none');
+			});
+		}
 
-		// for (i = 0; i < close.length; i++) {
-		// 	close[i].onclick = function() {
-		// 		var div = this.parentElement;
-		// 		div.style.display = "none";
-		// 	}
-		// }
 	}
-
-});
