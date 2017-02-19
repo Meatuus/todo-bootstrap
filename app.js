@@ -23,6 +23,7 @@
 	// create a new list item when click the 'add' button
 	function newElement() {
 		var li = document.createElement("li");
+		$(li).addClass("list-group-item");
 		var inputValue = $("#myInput").val();
 		var t = document.createTextNode(inputValue);
 		li.appendChild(t);

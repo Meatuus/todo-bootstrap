@@ -3,11 +3,10 @@
   <head>
 	<meta charset="utf-8">
 	<title>TO DO List</title>
-	<link rel="stylesheet" href="bootstrap4/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="bootstrap4/css/bootstrap-reboot.min.css">
-	<link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="node_modules/bootstrap/scss/bootstrap.scss"> -->
-	<link rel="stylesheet" href="styles.css">
+	<!-- <link rel="stylesheet" href="bootstrap4/css/bootstrap-grid.css"> -->
+	<link rel="stylesheet" href="bootstrap4/css/bootstrap-reboot.css">
+	<link rel="stylesheet" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script></script>
   </head>
@@ -15,16 +14,15 @@
   <body>
 	<div class="title">
 	  <h1>TO DO List</h1>
-	  <input type="text" id="myInput" placeholder="Task...">
-	  <span onclick="newElement()"class="addBtn">Add</span>
+	  <input class="form-control" type="text" id="myInput" placeholder="Task...">
+	  <button onclick="newElement()" type="submit" class="btn btn-primary btn-block">Add</button>
 	</div>
 
-	<ul id="myUL" class="todo-list">
-		<li>Hello</li>
+	<ul id="myUL" class="list-group">
+		<li class="list-group-item">Hello</li>
 	</ul>
 
   </body>
-  <script type="text/javascript" src="bootstrap4/js/bootstrap.min.js"></script>
-  <!-- <script type="text/javascript" src="node_modules/bootstrap/Gruntfile.js"></script> -->
+  <script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
   <script type="text/javascript" src="app.js"></script>
 </html>
